@@ -1,0 +1,33 @@
+####################################################
+# Deployment vars
+####################################################
+# If you want the default values supplied by concourse-up,
+# just put in an empty string
+####################################################
+domain: "ci.slugstack.com"
+tls_cert: ""
+tls_key: ""
+workers: "1"
+worker_size: "medium"
+web_size: "small"
+db_size: "small"
+aws_region: "us-west-2"
+project_name: "slugstack"
+
+####################################################
+# Credentials
+####################################################
+# It's recommended you put these key/values in a
+# file called ".env.yml" when you're working locally
+####################################################
+aws_access_key_id: ~
+aws_secret_access_key: ~
+github_access_token: ~ # Required to prevent rate-limiting from github.
+
+####################################################
+# Misc. Config.
+####################################################
+# Pin concourse-up to specific versions to
+# avoid params changing without our knowledge
+concourse_up_tag_filter: "0.9.*"
+pipeline_tasks_uri: https://github.com/slugstack/concourse-up-up.git
