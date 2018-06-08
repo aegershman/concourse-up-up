@@ -15,16 +15,6 @@ aws_region: "us-west-2"
 project_name: "slugstack"
 
 ####################################################
-# Credentials
-####################################################
-# It's recommended you put these key/values in a
-# file called ".env.yml" when you're working locally
-####################################################
-aws_access_key_id: ~
-aws_secret_access_key: ~
-github_access_token: ~ # Required to prevent rate-limiting from github.
-
-####################################################
 # Misc. Config.
 ####################################################
 # Pin concourse-up to specific versions to
