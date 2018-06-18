@@ -4,7 +4,7 @@
 # If you want the default values supplied by concourse-up,
 # just put in an empty string
 ####################################################
-domain: "ci.slugstack.com"
+domain: "ci.aegershman.com"
 tls_cert: ""
 tls_key: ""
 workers: "1"
@@ -12,7 +12,7 @@ worker_size: "medium"
 web_size: "small"
 db_size: "small"
 aws_region: "us-west-2"
-project_name: "slugstack"
+project_name: "aegershman"
 
 ####################################################
 # Misc. Config.
@@ -20,4 +20,4 @@ project_name: "slugstack"
 # Pin concourse-up to specific versions to
 # avoid params changing without our knowledge
 concourse_up_tag_filter: "0.9.*"
-pipeline_tasks_uri: https://github.com/slugstack/concourse-up-up.git
+pipeline_tasks_uri: https://github.com/aegershman/concourse-up-up.git

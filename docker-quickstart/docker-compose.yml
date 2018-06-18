@@ -10,7 +10,9 @@ services:
     - PGDATA=/database
 
   concourse:
-    image: concourse/concourse:3.13.0
+    # by the way, you can specify a specific version if you want--
+    # image: concourse/concourse:3.13.0
+    image: concourse/concourse
     command: quickstart
     privileged: true
     depends_on: [concourse-db]

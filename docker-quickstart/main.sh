@@ -8,8 +8,8 @@ up)
 	;;
 
 login)
-	fly --target 'local' login --concourse-url http://127.0.0.1:8080
-	fly --target 'local' sync
+	fly --target local login --concourse-url http://127.0.0.1:8080
+	fly --target local sync
 	;;
 
 down)
