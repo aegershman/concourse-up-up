@@ -11,7 +11,7 @@ workers: "1"
 worker_size: "medium"
 web_size: "small"
 db_size: "small"
-aws_region: "us-west-2"
+aws_region: "us-east-1"
 project_name: "aegershman"
 
 ####################################################
