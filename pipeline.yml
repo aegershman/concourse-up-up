@@ -2,8 +2,8 @@ resources:
 - name: concourse-up
   type: github-release
   source:
-    owner: EngineerBetter
-    repository: concourse-up
+    owner: ((concourse_up_owner))
+    repository: ((concourse_up_repository))
     tag_filter: ((concourse_up_tag_filter))
 
 - name: pipeline-tasks

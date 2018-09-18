@@ -4,7 +4,7 @@
 # If you want the default values supplied by concourse-up,
 # just put in an empty string
 ####################################################
-domain: "ci.gershman.io"
+domain: "" # "ci.gershman.io"
 tls_cert: ""
 tls_key: ""
 workers: "1"
@@ -27,3 +27,5 @@ aws_secret_access_key: ((aws_secret_access_key))
 concourse_up_tag_filter: "0.13.*"
 pipeline_tasks_uri: https://github.com/aegershman/concourse-up-up.git
 pipeline_tasks_branch: polish
+concourse_up_owner: EngineerBetter
+concourse_up_repository: concourse-up
