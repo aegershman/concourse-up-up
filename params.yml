@@ -14,6 +14,11 @@ db_size: "small"
 aws_region: "us-west-2"
 project_name: "gershman"
 
+# AWS creds can be loaded from credhub, or just override them
+# when you're setting the pipeline locally
+aws_access_key_id: ((aws_access_key_id))
+aws_secret_access_key: ((aws_secret_access_key))
+
 ####################################################
 # Misc. Config.
 ####################################################

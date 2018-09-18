@@ -10,7 +10,7 @@ hj)
 		-p concourse-up \
 		-c pipeline.yml \
 		-l params.yml \
-		-l .env.yml \
+		-l creds.yml \
 		"$@"
 	;;
 esac
