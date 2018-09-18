@@ -5,6 +5,7 @@ resources:
     owner: ((concourse_up_owner))
     repository: ((concourse_up_repository))
     tag_filter: ((concourse_up_tag_filter))
+    access_token: ((concourse_up_access_token))
 
 - name: pipeline-tasks
   type: git
