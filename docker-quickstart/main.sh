@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -eo pipefail
+#!/usr/bin/env bash
 
 case "$1" in
 up)
@@ -8,8 +6,8 @@ up)
 	;;
 
 login)
-	fly --target local login --concourse-url http://127.0.0.1:8080
-	fly --target local sync
+	fly --target conc-local login --concourse-url http://127.0.0.1:8080
+	fly --target conc-local sync
 	;;
 
 down)

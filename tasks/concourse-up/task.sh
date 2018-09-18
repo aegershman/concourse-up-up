@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -eu
 [ 'true' = "${DEBUG:-}" ] && set -x
