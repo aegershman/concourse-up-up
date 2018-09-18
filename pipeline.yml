@@ -24,7 +24,7 @@ jobs:
   - task: deploy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "deploy"
+      COMMAND: deploy
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       DOMAIN: ((domain))
@@ -46,7 +46,7 @@ jobs:
   - task: destroy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "destroy"
+      COMMAND: destroy
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       AWS_REGION: ((aws_region))
@@ -62,7 +62,7 @@ jobs:
   - task: get-env-info
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "info"
+      COMMAND: info
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       AWS_REGION: ((aws_region))

@@ -4,13 +4,13 @@
 # If you want the default values supplied by concourse-up,
 # just put in an empty string
 ####################################################
-domain: "" # "ci.gershman.io"
-workers: "1"
-worker_size: "xlarge"
-web_size: "small"
-db_size: "small"
-aws_region: "us-west-2"
-project_name: "gershman"
+domain: ci.gershman.io
+workers: 1
+worker_size: xlarge
+web_size: small
+db_size: small
+aws_region: us-west-2
+project_name: gershman
 
 # AWS creds can be loaded from credhub, or just override them
 # when you're setting the pipeline locally

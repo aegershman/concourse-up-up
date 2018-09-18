@@ -4,12 +4,6 @@ A concourse-based encapsulation of [concourse-up](https://github.com/EngineerBet
 
 ![pipeline](assets/pipeline.png)
 
-## domain problem
-
-If you're running this for the first time on a new environment, you must create it _without_ specifying a domain (e.g., `domain: ""`). Once it's created _and_ you have run `renew_cert` in the freshly-created environment (auto-generated), you can fill out the `domain:` param, re-run the pipeline, and everything should be hunky dory.
-
-![renew-cert-then-do-domain](assets/renew-cert-then-do-domain.png)
-
 ## you probably don't need this
 
 But it's a nice quick way to get a `ci.<some-org>.<tld>` up and running quick.
