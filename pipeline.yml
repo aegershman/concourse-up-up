@@ -11,6 +11,7 @@ resources:
   type: git
   source:
     uri: ((pipeline_tasks_uri))
+    branch: ((pipeline_tasks_branch))
 
 jobs:
 - name: concourse-up-deploy
