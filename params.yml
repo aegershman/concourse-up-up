@@ -6,7 +6,7 @@
 ####################################################
 domain: "" # "ci.gershman.io"
 workers: "1"
-worker_size: "medium"
+worker_size: "xlarge"
 web_size: "small"
 db_size: "small"
 aws_region: "us-west-2"
