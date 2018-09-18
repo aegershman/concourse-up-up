@@ -7,7 +7,7 @@
 domain: "ci.gershman.io"
 tls_cert: ""
 tls_key: ""
-workers: "1"
+workers: ""
 worker_size: ""
 web_size: ""
 db_size: ""

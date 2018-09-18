@@ -4,7 +4,6 @@ resources:
   source:
     owner: EngineerBetter
     repository: concourse-up
-    access_token: ((github_access_token))
     tag_filter: ((concourse_up_tag_filter))
 
 - name: pipeline-tasks
@@ -20,7 +19,8 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: deploy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
@@ -43,7 +43,8 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: destroy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
@@ -58,7 +59,8 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: get-env-info
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
