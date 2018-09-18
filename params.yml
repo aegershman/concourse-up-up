@@ -5,8 +5,6 @@
 # just put in an empty string
 ####################################################
 domain: "" # "ci.gershman.io"
-tls_cert: ""
-tls_key: ""
 workers: "1"
 worker_size: "medium"
 web_size: "small"

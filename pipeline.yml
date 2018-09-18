@@ -28,8 +28,6 @@ jobs:
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       DOMAIN: ((domain))
-      TLS_CERT: ((tls_cert))
-      TLS_KEY: ((tls_key))
       WORKERS: ((workers))
       WORKER_SIZE: ((worker_size))
       WEB_SIZE: ((web_size))
