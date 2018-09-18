@@ -1,6 +1,3 @@
 *DS_Store*
-bin
-.env.yml
-scratchpad
-*credentials*
-*creds*
+creds.yml
+credentials.yml
