@@ -11,7 +11,7 @@ workers: ""
 worker_size: ""
 web_size: ""
 db_size: ""
-aws_region: "us-east-1"
+aws_region: "us-west-2"
 project_name: "gershman"
 
 ####################################################
@@ -21,4 +21,4 @@ project_name: "gershman"
 # avoid params changing without our knowledge
 concourse_up_tag_filter: "0.13.*"
 pipeline_tasks_uri: https://github.com/aegershman/concourse-up-up.git
-pipeline_tasks_branch: master
+pipeline_tasks_branch: polish
