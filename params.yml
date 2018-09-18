@@ -4,7 +4,7 @@
 domain: ci.gershman.io
 workers: 1
 worker_size: xlarge
-web_size: small
+web_size: medium
 db_size: small
 aws_region: us-west-2
 project_name: gershman
