@@ -15,7 +15,7 @@ params:
   DOMAIN: ""
   TLS_CERT: ""
   TLS_KEY: ""
-  WORKERS: ""
+  WORKERS: ~
   WORKER_SIZE: ""
   WEB_SIZE: ""
   DB_SIZE: ""
