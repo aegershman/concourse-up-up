@@ -2,7 +2,7 @@
 
 A concourse-based encapsulation of [concourse-up](https://github.com/EngineerBetter/concourse-up) to run [concourse-up](https://github.com/EngineerBetter/concourse-up)... on concourse.
 
-![pipeline](assets/v0.png)
+![pipeline](assets/pipeline.png)
 
 ## you probably don't need this
 
