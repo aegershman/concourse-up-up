@@ -1,9 +1,6 @@
 ####################################################
 # Deployment vars
 ####################################################
-# If you want the default values supplied by concourse-up,
-# just put in an empty string
-####################################################
 domain: ci.gershman.io
 workers: 1
 worker_size: xlarge
@@ -20,8 +17,6 @@ aws_secret_access_key: ((aws_secret_access_key))
 ####################################################
 # Misc. Config.
 ####################################################
-# Pin concourse-up to specific versions to
-# avoid params changing without our knowledge
 concourse_up_tag_filter: "0.13.*"
 pipeline_tasks_uri: https://github.com/aegershman/concourse-up-up.git
 pipeline_tasks_branch: master
