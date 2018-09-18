@@ -2,15 +2,15 @@ resources:
 - name: concourse-up
   type: github-release
   source:
-    owner: EngineerBetter
-    repository: concourse-up
-    access_token: ((github_access_token))
+    owner: ((concourse_up_owner))
+    repository: ((concourse_up_repository))
     tag_filter: ((concourse_up_tag_filter))
 
 - name: pipeline-tasks
   type: git
   source:
     uri: ((pipeline_tasks_uri))
+    branch: ((pipeline_tasks_branch))
 
 jobs:
 - name: concourse-up-deploy
@@ -19,16 +19,15 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: deploy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "deploy"
+      COMMAND: deploy
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       DOMAIN: ((domain))
-      TLS_CERT: ((tls_cert))
-      TLS_KEY: ((tls_key))
       WORKERS: ((workers))
       WORKER_SIZE: ((worker_size))
       WEB_SIZE: ((web_size))
@@ -42,11 +41,12 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: destroy
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "destroy"
+      COMMAND: destroy
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       AWS_REGION: ((aws_region))
@@ -57,11 +57,12 @@ jobs:
   - aggregate:
     - get: pipeline-tasks
     - get: concourse-up
-      params: {globs: ["*linux*"]}
+      params:
+        globs: ["*linux*"]
   - task: get-env-info
     file: pipeline-tasks/tasks/concourse-up/task.yml
     params:
-      COMMAND: "info"
+      COMMAND: info
       AWS_ACCESS_KEY_ID: ((aws_access_key_id))
       AWS_SECRET_ACCESS_KEY: ((aws_secret_access_key))
       AWS_REGION: ((aws_region))

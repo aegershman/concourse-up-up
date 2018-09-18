@@ -4,27 +4,24 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: czero/cflinuxfs2
+    repository: cloudfoundry/cflinuxfs3
+    tag: latest
 
 params:
-  COMMAND: ""
-  NON_INTERACTIVE: "true"
-  DEBUG: "false"
-  AWS_ACCESS_KEY_ID: ""
-  AWS_SECRET_ACCESS_KEY: ""
-  DOMAIN: ""
-  TLS_CERT: ""
-  TLS_KEY: ""
-  WORKERS: ""
-  WORKER_SIZE: ""
-  WEB_SIZE: ""
-  DB_SIZE: ""
-  AWS_REGION: ""
-  PROJECT_NAME: ""
+  COMMAND: ~
+  AWS_ACCESS_KEY_ID: ~
+  AWS_SECRET_ACCESS_KEY: ~
+  DOMAIN: ~
+  WORKERS: ~
+  WORKER_SIZE: ~
+  WEB_SIZE: ~
+  DB_SIZE: ~
+  AWS_REGION: ~
+  PROJECT_NAME: ~
 
 inputs:
-  - name: pipeline-tasks
-  - name: concourse-up
+- name: pipeline-tasks
+- name: concourse-up
 
 run:
   path: pipeline-tasks/tasks/concourse-up/task.sh
